@@ -2,6 +2,7 @@ import { OpenAIApi, Configuration } from "openai";
 import { ChatRequest } from "./typing";
 
 export async function POST(req: Request) {
+  console.log('让我看看流的req.body', req.body)
   try {
     let apiKey = process.env.OPENAI_API_KEY;
 

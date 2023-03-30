@@ -54,6 +54,7 @@ async function createStream(req: NextRequest) {
 
 export async function POST(req: NextRequest) {
   try {
+    console.log('让我看看流的req.body', req.body)
     const stream = await createStream(req);
     return new Response(stream);
   } catch (error) {
